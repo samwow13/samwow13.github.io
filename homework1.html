@@ -37,68 +37,115 @@
        
       </div>
       <br>
-		<p><a href="index.html">Main Page </a>
-	  
-      <h1>Talk About stuff</h1>
+		<p><a href="index.html">Main Page </a></p>
+	  <hr>
+      <h1>Assignment Description</h1>
 
-      <p>I am currently a student enrolled in Computer Science at Western Oregon University.  This is a portfolio for
-	  my software I developed during the first term.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
+      <p>In this assignment I was tasked to learn Git from the command line, learn and apply HTML and CSS, learn Bootstrap
+	  (Twitter preferably), and of course, create a Git pages account where this website is hosted for free. Over the last summer
+	  I took the time to learn as much about twitter bootstrap, HTML, and CSS as possible. So mostly, I had to learn Git and
+	  start a Github account for this assignment. Everything else I had done before. I have broken down each part into a section
+	  and talk about my step by stepprocess to complete them.</p> <br><br>
+	  <hr>
+	  <h2>Learning Git Commands</h2>
+	  <h3>Git Status</h3>
+	  
+	  <p>In the world of git, "git status" is a very important concept to initially understand. Git has several different stages
+	  that a file can be in during a git status query. One, it can be untracked, which means that Git hasn't tracked this file at all, even 
+	  in previous iterations. Two, it can be added from before, but not in the staging area for the next add. Or three, it can be added
+	  yet not commited to the next version yet. To start, find the your work area folder and right click, then press "GIT Bash here".</p>
+	  
+	  	  <pre>$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working tree clean
+			</pre>
       <br>
-	  
-	  <h1>Talk about stuff</h1>
+	  <hr>
+	  <h3>Git Add</h3>
 
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
+      <p>Once a file has been staged. The next step is to add said file, or all files needed to the next potential commit.
+	  As seen in the bottom line, the index.html file is ready to commit.</p>
+	  	  <pre>Sam@LAPTOP-0RE24ICD MINGW64 ~/Desktop/Homework Two/CS460 (master)
+$ git add index.html
+
+Sam@LAPTOP-0RE24ICD MINGW64 ~/Desktop/Homework Two/CS460 (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   index.html
+</pre>
 			<br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
+	  <hr>
+	  <h3>Git Commit</h3>
+      <p>Git commits are in essence the command used to save your local data to a timestamp which can later be retreived.
+	  Be mindful of commits as they are not simply erased, and can cause problems if not reasoned about beforehand. The following 
+	  syntax is a commit with a predetermined commit name. This avoids bringing up the VI editor automatically.</p>
+	  	  <pre>$ git commit -m "Added index file"
+[master ca4c496] Added index file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+</pre>
       <br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
+	  <hr>
+	  <h3>Git Clone</h3>
+      <p>Now that we have the basics, the next step is to create a repository on Github or Bitbucket. They are indeed free,
+	  however most do require that your repository remains public until you pay for the website. Once you have your repository
+	  created, simply clone from the link on the website and add it as seen below.</p>
+	  <pre>$ git clone https://github.com/libgit2/libgit2 mylibgit</pre>
       <br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
+	  <hr>
+	  <h3>Setting The Origin</h3>
+      <p>This step connects the local repository to your recently made Git repository online.</p>
+	  <pre>git remote add origin remote repository https://github.com/libgit2/libgit2</pre>
       <br>
+	  <hr>
+	  <h3>Pushing to the Remote Repository</h3>
+	  <p>Once that is all set, you are just one command away from pushing your most recent commit up to your online repository.
+	  The following command, does just that.</p>
 	  
-	  
+	  <pre>git push origin master</pre>
+	  <br><br><hr>
+	  <h1>HTML & CSS & Bootstrap</h1>
+	  <p> HTML and CSS are the lifeblood of the internet. They, along with automatic web builders are commonly used throughout
+	  society. Bootstrap is a quicker way to get a fairly good looking page up and running fast. 
+	  <hr>
+	  <h3>Bootstrap</h3>
+	  <p>To start with bootstrap, simply add a link tag to your HTML document. In this case, I downloaded the file 
+	  directly from getbootstrap.com so it is held locally. Meaning I can make changes, and if changes are made to the online file
+	  It won't directly affect your local code. Doing so also means you can work on your code while being offline if need be.</p>
+	  <img src="images/Bootstrapexample.jpg" style="width:404px;height:25px;">
+	  <hr>
+	  <h3>HTML</h3>
+	  <p>Below is an example of a basic HTML page. With HTML, everything must be wrapped inside the html brackets. Inside of
+	  that, many various elements can be used. Commonly, the header tag is at the top of the page, within that a title can be set 
+	  for the page. All of the content for the page itself must be held within the body tags.</p>
+	  <img src="images/htmlexample.jpg" style="width:350px;height:250px;">
+	  <hr>
+	  <h3>CSS</h3>
+	  <p>CSS is short for Cascading Style Sheets. Essentially, it is how you change the styling of the given HTML documents.
+	  Without it, the internet would be boring and unworthy of your eyes. The code snippet below is a snip of my styles.css file
+	  from homework 1.<p>
+	  <img src="images/cssexample.jpg" style="width:400px;height:250px;">
+	  <hr>
+	  <h1>My Homework 1</h1>
+	  <p>After learning everything above. I wen't on to start by creating my index page. I referred to the bootstrap css file
+	  and referred to the classes inside of them with id's and classes to create a stylish, yet basic website. Next, I created my
+	  nav bar and made sure everything was working on the main page. After the nav bar was working correctly, I moved on to fill
+	  in some basic elements needed for the assignment description. Such as, multi column layout, different list styles, and various
+	  elements required by the homework. After I had one working page, I created new files to link my page too, then copy and pasted
+	  the content from  my index file to the new sheets, kept everything outside of the body tags and edited them. This makes it easy
+	  to make every webpage look the same instead of modifying the code on all pages when a visual change needs to be made.
+	  After that was completed, my website just needed filler text which was generated at a ipsum site. The link following this paragraph
+	  is to my website which I decided to host on my github pages account. Please, check it out!</p>
+	  <p><a href="HW1/index.html">Homework One </a></p>
 	  <br><br>
 
-
-	  
       <hr>
 
       <div class="greyBack">
