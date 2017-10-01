@@ -37,64 +37,133 @@
        
       </div>
       <br>
-		<p><a href="index.html">Main Page </a>
-	  
-      <h1>Talk About stuff</h1>
+		<a href="index.html">Main Page </a>
+	  <hr>
+      <h1>Assignment Description</h1>
 
-      <p>I am currently a student enrolled in Computer Science at Western Oregon University.  This is a portfolio for
-	  my software I developed during the first term.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
+      <p>For homework two the bulk of the assignment was to create a webpage with Javascript and jQuery that can calculate 
+	  something. After some consideration, I decided to build an animated bubble sort. This sort would take in a given list of tables
+	  and output the sorted list through jQuery as one option. As a 2nd option, it would animate the sort and really dive in and
+	  show how a bubble sort works. </p>
+ 
       <br>
 	  
-	  <h1>Talk about stuff</h1>
+	  <hr>
+	  <h3>Setting up the Page.</h3>
 
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
-			<br>
+      <p>Since this homework required only a single page app. I first setup the page in an wireframe design editor, this is a 
+	  <a href="https://github.com/samwow13/CS460/blob/master/HW2/WireFrame%20Mockup.PNG">Link to design. </a> 
+	  Next, I went ahead and set up the basic HTML tags to start a website, linked to both the jQuery library as well as
+	  importing the Javascript CDN. Then, I quickly put together the HTML and CSS to creat the website that looked like 
+	  my wireframe mockup. The code below is the body section of my application. This is the bulk of the HTML needed for this project. </p>
+	 	  <code>
+&lt;body&gt;<br />
+&lt;!-- Body section of Document--&gt;<br />
+	&lt;div class="myDiv"&gt;<br />
+		&lt;center&gt;&lt;h1&gt;Bubble Sort&lt;/h1&gt;&lt;/center&gt;&lt;br&gt;<br />
+				&lt;h3&gt;How many inputs would you like? Keep in mind larger lists take more time to sort.&lt;/h3&gt;<br />
+<br />
+				&lt;h4&gt;Once you decide your input size, enter it below.&#160;&#160;Press enter first, then use the sort button to animate it. The Output table button to output your data raw.&lt;br&gt;&lt;br&gt;<br />
+<br />
+		&lt;div id="init"&gt;<br />
+		&lt;button id="button1"&gt;Enter&lt;/button&gt;<br />
+		&lt;input id="iCount"&gt;&lt;/input&gt;&lt;br&gt;&lt;br&gt;<br />
+		&lt;/div&gt;<br />
+		&lt;form id="regForm"&gt;<br />
+		&lt;!-- THIS WHERE INPUTS GO --&gt;		&#160;&#160;<br />
+		&lt;/form&gt;<br />
+		&lt;div id="sortButtonBox" style="padding: 0px 0px 30px 0px;"&gt; <br />
+			&lt;button id="bSort" onClick="bubbleSort()"&gt;Sort&lt;/button&gt;<br />
+			&lt;button id="bAniTest" onClick="tableMaker()"&gt;Output Table Below&lt;/button&gt;<br />
+		 &lt;/div&gt;<br />
+		 &lt;div id="tableContainer" style="margin:auto"&gt;&lt;/div&gt;<br />
+		&lt;/center&gt;<br />
+	&lt;/div&gt;
+		</code>
+	 
+	 
+	  <br>
+	  <hr>
+	  <h3>Javascript Method for inputs</h3>
+      <p>This method was built to take an input, then, for instance a user enters 10, my webpage would then have 10 random number
+	  input fields created.  Because of the second part of the method, it populates them automatically using jQuery to find values and append
+	  them to increasing input numbers. If desired the user can change the numbers.</p>
+	  	  <pre>  			//ADD INPUTS TO PAGE
+  			$('#button1').click(function(){
+  				totalCount = $('#iCount').val();
+  				console.dir(totalCount);
+  				for(var i = 0;i < totalCount;i++){
+  					$('#regForm').append(addInput(i));
+  				}
+  				$('#init').hide();
+  				//RANDOM VALUE INPUTS
+  				for(var i = 0;i< totalCount;i++){
+  					$('#input' + i).val(Math.floor((Math.random() * 5000) + 1));
+  					arrInputs.push( parseInt( $("#input" + i).val() ) );
+  					arrInputs2.push( parseInt( $("#input" + i).val() ) );
+  				}
+  			});</pre>
+      <br>
 	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
+	  <hr>
+	  <h3>Bubble Sort and Animate</h3>
+      <p>The sort method below uses two loops to implement a basic (and slow) bubblesort. I also animated it to show on larger
+	  lists just how slow a sort like this can be. It does have a great visualization of how the data moves and compares while
+	  the loops are running. Again this method mixes Javascript and jQuery to accomplish the task.</p>
+	  <pre>			function bubbleSort() { 
+				aniList = [];
+				console.dir("Sort Begins: "); 
+			    var length = arrInputs.length;
+			    console.dir("Length: " + length);
+			    for (var i = (length - 1); i >= 0; i--) {
+			        //Number of passes
+			        for (var j = (length - i); j > 0; j--) {
+			            //Compare the adjacent positions
+			            console.dir($("#input" + j).val() + " < " + $("#input" + (j - 1)).val());
+			            if (arrInputs[j] < arrInputs[j-1]) {
+			                //Swap the numbers
+			                var tmp = arrInputs[j];
+			                arrInputs[j] = arrInputs[j - 1];
+			                arrInputs[j - 1] = tmp;
+			                console.dir("Swap");
+			                //RUN ANIMATION
+			                aniList.push("#input" + (j-1));
+			                aniList.push("#input"+j);
+			            }
+			        }
+			    }
+			    console.dir(arrInputs2);
+			    console.dir(arrInputs);
+			    console.dir(aniList);
+			    aniPoint = -2;
+			    animateInput();
 			}</pre>
       <br>
 	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
+	  <hr>
+	  <h3>Output Function</h3>
+      <p>The function below is a simple table making function that completes part of the homework assignment as per the rubric.
+	  Simply, instead of animating the sort, you have the option to just sort quickly, and export the results to a table.</p>
       <br>
 	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-      <br>
-	  
-	  
+	  <pre>  			//Creates a table and exports it below the sort.
+  			function tableMaker(){
+  				tableString = "<table style='margin: auto'><tr><td colspan='2'>VALUES</td></tr>";
+  				inputCounter = $('input').length - 1;
+  				console.dir(inputCounter);
+  				for(i = 0; i < inputCounter; i++){
+  					tableString += "<tr><td>#" + i + "</td><td>" + $("#input"+i).val() + "</td></tr>";
+  				}
+  				tableString += "</table>";
+  				$('#tableContainer').append(tableString);
+  			}</pre>
+			
+	   <hr>
+	   <h1>Conclusion</h1>
+	   <p>After spending a few days troubleshooting my animation methods I was able to get it to work. It was quite challenging, yet 
+	   very rewarding to spend time learning jQuery for me. I look forward to using it more in the future. The link after this is to my
+	   git pages hosted Homework 2 if you would like to take a peak at the finished product.</p>
+	  <a href="HW2/index.html">Link to Homework Two </a>
 	  <br><br>
 
 
