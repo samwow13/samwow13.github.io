@@ -38,60 +38,58 @@
       </div>
       <br>
 		<p><a href="index.html">Main Page </a>
-	  
-      <h1>Talk About stuff</h1>
+	  <hr>
+      <h1>Assignment Description</h1>
 
-      <p>I am currently a student enrolled in Computer Science at Western Oregon University.  This is a portfolio for
-	  my software I developed during the first term.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
+      <p>In this assignment we were tasked to take a simple Java console Calculator application and rewrite it in C#.
+	  The main things to watch out for were; different naming conventions, declaration of variables, getters and setters, general 
+	  syntax differences between the languages. I prepared for this assignment by taking time to read up on C# and looking for differences
+	  in the code. Also, I watched several videos on the differences between the languages in order to understand them better.
+	  Overall, C# is similar to Java, yet at the same time is a fuller and richer coding experience. C# coupled with Visual Studio
+	  2017 is an excellent coding enviornment and language to develop in.</p>
+		<p>Link to: <a href="http://www.wou.edu/~morses/classes/cs46x/assignments/HW3.html">Homework Three </a>
+	
       <br>
-	  
-	  <h1>Talk about stuff</h1>
-
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
+	  <hr>
+	  <h3>Getters and Setters</h3>
+      <p>The example below shows a C# way of creating getters and setters for the variable Data. Compared to Java, where you
+	  must first initialize the variable, then create an entire get method, followed by a full set method. C# makes the process  simple
+	  and less time consuming.</p>
+	  	  <pre>        public object Data
+        {
+               get { return data; }
+               set { data = value; }
+           
+        }</pre>
 			<br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
+	  <hr>
+	  <h3>Naming Conventions.</h3>
+      <p>Interfaces just have one major difference in C# from java. The fact that they have a naming convention, when naming an
+	  interface, please name it appropriately and have it start with an "I" as seen below. Also, I should mention that the 
+	  naming convention for String is now to initiate it as lower-case instead.</p>
+	  	  <pre>   public interface IStackADT</pre>
       <br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
+	  <hr>
+	  <h3>Commenting in C#</h3>
+      <p>One of the C# features  I enjoyed most was the /// comment. If you create a method, and finish the method. Adding a 
+	  triple slash above it auto populates some great tags to help explain how your method works. As soon as it it populated all you 
+	  need to do is fill in the parameter type, as well as a description of the method, and of course the return type if one exists.</p>
+	  <code>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/// &lt;summary&gt;<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/// Pushes an item to the top of a stack.<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/// &lt;/summary&gt;<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/// &lt;param name="newItem"&gt;The item we&#160;&#160;pusuh to the top.&lt;/param&gt;<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/// &lt;returns&gt;returns a reference if no other item exists.&lt;/returns&gt;
+	  </code>
+
       <br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
+	  <hr>
+	  <h1>Conclusion</h1>
+      <p>The core of C# is very similar to Java. If statements, loops, comments, and declarations are all similar with just a slightly
+	  different take on it. I completed the assignment by first setting up the project in Visual Studio. After that, I just went through
+	  class by class looking at how the Java code was implemented, then thinking about how that might change for C# and typing it in.
+	  If it didn't work, I tried again. Below this I have a link to the repository for this homework assignment.</p>
+	  <p>Link To:<a href="https://github.com/samwow13/CS460/tree/master/HW3/HW3/HW3">Homework Three Repository </a></p>
       <br>
 	  
 	  
