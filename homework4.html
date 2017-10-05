@@ -38,59 +38,70 @@
         <br>
 	<p><a href="index.html">Main Page </a>
 	<hr>
-      <h1>Assignment Description</h1>
-
-      <p>The goal of this homework assignment was to get started with MVC and create an application that has no need to connect to a database.
+      
+	    <h1>Assignment Description</h1>
+     	   <p>The goal of this homework assignment was to get started with MVC and create an application that has no need to connect to a database.
 	    Some of the basic end goals of this homework are to learn about: ViewBag / ViewData objects, demonstrate the request command, 
 	    learn simple Razor commands, learn what MVC stands for (Models, Views, Controllers), continue our journey on learning C# syntax
 	    and key language features.</p> 
-      	  <br>
-	  <hr>
-	  <h1>Talk about stuff</h1>
-
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
-			<br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
-      <br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
-      <br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-      <br>
-	  
-	  
-	  <br><br>
+      	  
+	    <hr>
+	    <h3>First steps</h3>
+      	    <p>I went ahead and started a new MVC project with no template. Then I returned to Git, created a new branch, and proceeded to checkout
+	    to that branch to start work on this new project.  Once the program was up and running, I created the controller class by right-clicking
+	    the controllers folder, and adding a new blank controller with the name of home.  This controller comes with a call to the index controller
+	    with no automatic view.  So first thing is first, lets add a view for index and fill it with the content below.  @html.actionLink events
+	    are a simple way to setup multiple pages with links to each of the pages required for this assignment.</p>
+	    <center><img src="#" style="width:304px;height:400px;"></center>
+	    
+	    <hr>  
+	    <h3>GetPage()</h3>
+      	    <p>Next up, I added the GetPage() method to the controller, and empty view, as well as a view that had all the logic needed to complete
+	    the task. Both are shown below.</p>
+	    <center><img src="#" style="width:304px;height:400px;"></center>
+	    
+	    <hr>
+	    <h3>Adding the GetPage() View</h1>
+      	    <p>Below you will see the code that was required to get this method working. Of course, you have to start by right-clicking the controller again
+	    and creating a new view.  From then on its about creating a form that can take an input from the user, which can be sent back to the controller
+	    to process and then output the data to the tags below. Unfortunately, this method does take the information input, and put it in the URL above.</p>
+	    <center><img src="#" style="width:304px;height:400px;"></center>
+      
+	    <hr>
+	    <h3>PostPage()</h3>
+      	    <p>The PostPage method in the controller class has a static empty view, as well as the view needed for the logic to work again.
+	    This time, instead of using an empty parameters method, the assignment requires use of a FormCollection object as a parameter
+	    to gather information from the input fields we use. This method saves the information to the server instead of just putting it
+	    in the URL like the above method.</p>
+	    <center><img src="#" style="width:304px;height:400px;"></center>
+      
+	    <hr>
+	    <h3>PostPage() View</h3>
+      	    <p>This View is simlar to the last View we created. It is basically just the same type of HTML form created for a new purpose. 
+	    That purpose is to show how the [HtmlPost] C# works vs the standard Get.</p>
+	    <center><img src="#" style="width:304px;height:400px;"></center>
+	    
+	    <hr>
+	    <h3>LoanCalc()</h3>
+     	    <p>The final part of the homework is to create a loan calculator that can take in three inputs, loanTotal, interest, and total time.
+	    Below I show the code for accomplishing the backend of the controller.</p>
+	    <center><img src="#" style="width:304px;height:400px;"></center>
+	    
+	    <hr>
+	    <h3>LoanCalc() View</h3>
+      	    <p>In this view I had to instantiate some initial values using javascript at the top of the page. Then right some logic with the Request
+	    method to constantly run, and if a new set of numbers were put in to use those towards the calculations instead of the initial numbers.
+	    Other than that it is another form with output below of the results.  I've accounted for bad inputs with HTML limitations as seen in the code.</p>
+	    <center><img src="#" style="width:304px;height:400px;"></center>
+	    
+	    <hr>
+	    <h1>Conclusion </h1>
+	    <p>In conclusion, after using MVC over a few days it really started to come together in how it works. To me, MVC isn't a coding language,
+	    instead it is a framework to make large complex projects more organized and easier to accomplish. So in that respect, even though I was intimidated
+	    by it at first when looking into it, I have learned to appreciate what it can do for the average software developer and look forward to 
+	    diving deeper into it in the next homework assignments.</p>
+	    <p>Link to: <a href="http://www.wou.edu/~morses/classes/cs46x/assignments/HW4.html">Homework Four </a>
+	   <br><br>
 
 
 	  
