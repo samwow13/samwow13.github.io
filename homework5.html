@@ -33,69 +33,100 @@
 
       <div class="hero-unit">
         <center><h1>MVC App 2, Simple Database</h1></center>
-        
-       
       </div>
-      <br>
-		<p><a href="index.html">Main Page </a>
-	  
-      <h1>Talk About stuff</h1>
+        <br>
+	<p><a href="index.html">Main Page </a>
+	<hr>
+      
+	    <h1>Assignment Description</h1>
+     	   <p>Homework five tasks us with creating a simple database using a T-SQL script and connect to it with some basic options. 
+			For me, learning T-SQL was the most difficult part as I had a rough time finding good information on the subject.
+			Essentially, we needed to create a basic database with a few entrys that were automatically loaded from the script. Then,
+			be able to add more through a create form and return to the index and see the added entries. This program will theoretically
+			be used to change addresses for people registered through the DMV.</p> 
+      	  
+	    <hr>
+	    <h3>First Steps Up and Down</h3>
+      	    <p>These scripts are pretty simple once you actually figure out what your doing. The up.sql script below creates the database, creates the table,
+			and adds the first 5 entries. What makes this technique useful is that you can run this script on other machines to start up
+			the same project on multiple machines.  The down.sql script just detaches the database, then deletes it.
+			</p>
+	    <center><img src="images/HW5/up.JPG"></center>
+		<br>
+		<center><img src="images/HW5/down.JPG"></center>
+	    
+	    <hr>  
+	    <h3>DbContext class</h3>
+      	    <p>I added the DbContext class as shown below, its a simple class that just creates a set and get for our Request
+				Controller.</p>
+	    <center><img src="images/HW5/DbContext.JPG"></center>
+	    
+	    <hr>
+	    <h3>Model Class</h1>
+      	    <p>The model class is basically like creating an interface to use with the database. You can redefine stuff here if needed.
+			or just set requirements on fields as shown below.</p>
+	    <center><img src="images/HW5/ModelsRequest.JPG"></center>
+      
+	    <hr>
+	    <h3>Web.config Adding Connection String</h3>
+      	    <p>After quite a bit of fiddling I found the correct connection string to use here. Unfortunately, syntax wise it is hard to tell if you 
+			are doing this correct the first time. I accidently started by connecting to the SQL server connection string instead of the database that
+			I should have been connecting too.  Instead of throwing an understandable error of not being connected, it kept throwing a nullarguementexception
+			which I later found out that it wasn't connecting! After adding the correct string everything worked much better.</p>
+	    <center><img src="images/HW5/ConnectionString.JPG"></center>
+      
+	    <hr>
+	    <h3>Controllers</h3>
+      	    <p>The home controller for this project was very simple. It just returned an index view. The request controller is 
+			where much of the work is done for creating the views.  The request index view just shows a table of what all is inside
+			the database. The request creat view is just a form that the user can input data too.</p>
+	    <center><img src="images/HW5/HomeController.JPG"></center>
+		<center><img src="images/HW5/RequestController.JPG"></center>
+	    
+	    <hr>
+	    <h3>Home Index View</h3>
+     	    <p>This view just links the user to the proper request controller.</p>
+	    <center><img src="images/HW5/Home_index_view.JPG"></center>
+	    
+	    <hr>
+	    <h3>Request Index View</h3>
+      	    <p>This page displays the information in the Database and nicely outputs the results to a table.</p>
+	    <center><img src="images/HW5/Request_index_view_part1.JPG"></center>
+		<center><img src="images/HW5/Request_index_view_part2.JPG"></center>
+	    
+		<hr>
+	    <h3>Request Create View</h3>
+      	    <p>The Create form is represented below. I used Razor code to help create this UI as shown.  Essentially, everything below
+			is just a form that takes the user input to change an address through the DMV system.</p>
+	    <center><img src="images/HW5/Request_create_view_part1.JPG"></center>
+		<center><img src="images/HW5/Request_create_view_part2.JPG"></center>
+		<center><img src="images/HW5/Request_create_view_part3.JPG"></center>
+		
+		
+	    <hr>
+	    <h1>Conclusion </h1>
+	    <p>In conclusion, working with a database can be extremely useful and most projects nowadays require one. Learning to use a database
+		through MVC has been a learning experience but I am glad I did it. I am looking forward to learning more about entity framework in the 
+		next few homeworks to fully understand it.</p>
+		<br>
+		<hr>
+		<h3>Working Project Screenshots</h3>
+		<center><img src="images/HW5/inAction/Home_Index_1.JPG"></center>
+		<br><hr>
+		<center><img src="images/HW5/inAction/Request_index_2.JPG"></center>
+		<br><hr>
+		<center><img src="images/HW5/inAction/Request_create_3.JPG"></center>
+		<br><hr>
+		<center><img src="images/HW5/inAction/Request_create_4.JPG"></center>
+		<br><hr>
+		<center><img src="images/HW5/inAction/Request_create_5.JPG"></center>
+		<br><hr>
+		
+	    <p>Link to: <a href="http://www.wou.edu/~morses/classes/cs46x/assignments/HW5.html">Homework Five </a></p>
+		<p>Link to: <a href="https://github.com/samwow13/CS460/tree/master/HW5/HW5">Repository for hw5 </a></p>
+		
+	   <br><br>
 
-      <p>I am currently a student enrolled in Computer Science at Western Oregon University.  This is a portfolio for
-	  my software I developed during the first term.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
-      <br>
-	  
-	  <h1>Talk about stuff</h1>
-
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
-			<br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
-      <br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
-      <br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-      <br>
-	  
-	  
-	  <br><br>
 
 
 	  
