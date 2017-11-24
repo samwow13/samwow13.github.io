@@ -39,63 +39,123 @@
       <br>
 		<p><a href="index.html">Main Page </a>
 	  
-      <h1>Talk About stuff</h1>
+ 	    <h1>Assignment Description</h1>
+     	   <p>This assignment was created to test our overall understanding of the previous homeworks and put them all into
+		   one challenge. Starting with no database, create two scripts to create the tables and populate them with basic seed data.
+		   Then, use code-first style of creating our model to interact with our database. After that, implement the controller and views
+		   followed by creating a home controller with AJAX to view each db live, without reloading.
+		   
+		   I wrote this as close to a guide as possible, to help with the in class final.
+		   </p> 
+      	  
+		  <hr>
+		  
+	    <h3>First Steps Up.sql and Down.sql</h3>
+      	    <p>Below I show the completed initDB.sql file as well as the populate.sql file. Each of these is fairly self-explanatory.
+			The main thing is to make sure you understand the table relationships before you go starting it. That way you can set up the 
+			proper primary and secondary keys.
+			</p>
+		<center><img src="images/HW8/initDB.JPG"></center><br>
+		<center><img src="images/HW8/populateDB.JPG"></center>
 
-      <p>I am currently a student enrolled in Computer Science at Western Oregon University.  This is a portfolio for
-	  my software I developed during the first term.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
-      <br>
-	  
-	  <h1>Talk about stuff</h1>
+	    <hr> 
+		
+	    <h3>Code First Model Creation</h3>
+      	    <p> Creating the model is easy once you have the database ready. It's as easy as following the dialogue boxes and making
+			sure everything is properly checked off. When completed, a model is ready to use in your controller.
+			</p>
+		<center><img src="images/HW8/modelFromDB.JPG"></center>
 
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
-			<br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
-      <br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
-      <br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-      <br>
-	  
-	  
-	  <br><br>
+		<hr>
+		
+	    <h3>Autogenerate Controllers other than Home with views</h1>
+      	    <p>This is fairly self explanatory as well. Using this option you can auto generate the desired controller and some basic
+			controller logic for the artist class. Then follow that to create some basic controllers for the other needed tables.
+			These tables will just output what is currently inside the databse. Since it is a small amount of information, no need 
+			for pagination at the moment.
+			</p>
+	    <center><img src="images/HW8/controllerCreation1.JPG"></center><br>
+		<center><img src="images/HW8/controllerCreation2.JPG"></center>
+
+	    <hr>
+		
+		<h3>Add to shared Layout / Custom Routing in routeconfig</h3>
+      	    <p> The shared layout must be updated to add the necessary links at the top of the page. As well as the @rendersection
+			code at the bottom of the page. 
+			</p>
+	    <center><img src="images/HW8/sharedLayout.JPG"></center><br>
+		<center><img src="images/HW8/customRoute.JPG"></center>
+		
+		<hr>
+		
+		<h3>Create Partial Class</h3>
+      	    <p> A partial class is necessary when we need to combine potential variables in the database. As shown below we create a 
+			new variable "fullname" from adding two strings together. This is useful for when we are testing string length for a 
+			requirement of this assignment.
+			</p>
+	    <center><img src="images/HW8/partialClass.JPG"></center>
+
+		<hr>
+		
+		<h3>Restrict Name length in Controller, and View.</h3>
+      	    <p> To restrict the name lenght we add restrictions inside the controller as well as the view.
+			</p>
+	    <center><img src="images/HW8/controllerNameLength.JPG"></center>
+		<center><img src="images/HW8/viewNameLength.JPG"></center>
+		
+		<hr>
+		
+		<h1>AJAX</h1>
+		<hr>
+		<h3>Create HomeController and view.</h3>
+      	    <p> Create a homeController and index view for our AJAX page. The view should have an area that can be used to output
+			the needed ajax from our genre.js file. At the top of our view, you can see a for each loop that creates the necessary 
+			buttons.
+			</p>
+	    <center><img src="images/HW8/homeController.JPG"></center><br>
+		<center><img src="images/HW8/homeView.JPG"></center>
+		
+		<hr>
+		
+		<h3>Javascript Backend for AJAX</h3>
+      	    <p>The backend for AJAX is shown below in the genre.js file.  It is just two functions created to do the necessary actions
+			on the view. See it in action below!
+			</p>
+	    <center><img src="images/HW8/ajaxCall.JPG"></center>
+		
+		<hr>
+		
+	    <h1>Conclusion </h1>
+	    <p>This homework was essentially to build a simple MVC database web application from scratch.  Although challenging, it shows
+		how useful the MVC Asp.net 5 framework can really be. Many projects could be made simpler, or at least easier to get up and running
+		quickly with some background knowledge of how MVC works. 
+		</p>
+		
+		<br>
+		
+		<hr>
+		<h3>Working Project Screenshots</h3>
+		<center><img src="images/HW8/artTracker1.JPG"></center>
+		<br><hr>
+		<center><img src="images/HW8/artTracker2.JPG"></center>
+		<br><hr>
+		<center><img src="images/HW8/artTracker3.JPG"></center>
+		<br><hr>
+		<center><img src="images/HW8/artTracker4.JPG"></center>
+		<br><hr>
+		<center><img src="images/HW8/artTracker5.JPG"></center>
+		<br><hr>
+		<center><img src="images/HW8/artTracker6.JPG"></center>
+		<br><hr>
+		<center><img src="images/HW8/artTracker7.JPG"></center>
+		<br><hr>
+
+		
+	    <p>Link to: <a href="http://www.wou.edu/~morses/classes/cs46x/assignments/HW8.html">Homework Eight </a></p>
+		<p>Link to: <a href="https://github.com/samwow13/CS460/tree/master/HW8/HW8">Repository for hw8 </a></p>
+		
+	   <br><br>
+
 
 
 	  
