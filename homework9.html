@@ -39,60 +39,55 @@
       <br>
 		<p><a href="index.html">Main Page </a>
 	  
-      <h1>Talk About stuff</h1>
 
-      <p>I am currently a student enrolled in Computer Science at Western Oregon University.  This is a portfolio for
-	  my software I developed during the first term.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
-      <br>
-	  
-	  <h1>Talk about stuff</h1>
+	  	<h1>Assignment Description</h1>
+     	   <p></p> 
+      	  
+	    <hr>
+	    <h3>How To upload to the cloud</h3>
+      	    <p>In this section I'll just basically write out the process of uploading to the cloud. This walkthrough should show that
+				I understand the process, as well as complete the necessary blog requirements.
+			</p>
+			<ol>
+				<li>First, start by creating an account on Azure.</li>
+				<li>Then, click resource group off to the left. Setup a new resource with the plus sign, name it what you like. I went with FallTerm. Don't forget to refresh!</li>
+				<li>Time to setup the database. Add a new db, blank, no elastic pool. Select create server, fill in necessary fields. Then make sure to use the basic pricing tier, then pin it to your dashboard!</li>
+				<li>Next up, create a new web application. Use the existing resource group, then fill in all necessary fields and pin to dashboard.</li>
+				<li>Do a quick check to see if it is live!</li>
+				<li>Now, click on your DB and find "set server firewall". Whatever your listed IP is, go ahead and add it so you can securely access the DB.</li>
+				<li>Next up, open Visual Studio and login to Azure.</li>
+				<li>Open Sql Server Management Studio and login properly here as well. Example below.</li>
+				<center><img src="images/HW9/logonInfoHelp.JPG"></center>
+				<li>Now, go ahead and run your Up and populate script on the database.</li>
+				<li>Add a local connection string to the Online Database. For now, set it here and hide it later. Remember, no brackets around the username and password information!</li>
+				<li>Add the dbcontext name as well as the connection string to your Azure/Appsettings/connectionStrings area.</li>
+				<li>Rebuild!</li>
+				<li>Now its time to publish! Select existing, azure services, publish! </li>
+				<li>Test your web app!</li>
+			</ol>
 
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
-			<br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
-      <br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-	  <pre>public class HelloWorld
-				{
-					public static void main(String[] args) {
-					System.out.println("Hello World!");
-				}
-			}</pre>
-      <br>
-	  
-	  <h1>Talk about stuff</h1>
-      <p>This webpage, and everything linked from it are part of my working portfolio for CS460 senior project.
-	  The homework links below are all created in a blog style to show what thought process I went through to complete
-	  each homework assignment. Further below, I am linked to any useful cheat sheets or helpful documents.</p>
-      <br>
+	   
+		
+	    <hr>
+	    <h1>Conclusion </h1>
+	    <p>I think Azure can be a great place for hosting websites with databases. Pretty simple to setup once everything works. 
+		Once you get the process down, should be a very quick way to deploy websites!
+		</p>
+		
+		<br>
+		<hr>
+		
+		<h3>Working Project Screenshot</h3>
+		<center><img src="images/HW9/working.JPG"></center>
+		<br><hr>
+
+		<br><br>
+	    <p>Link to: <a href="http://www.wou.edu/~morses/classes/cs46x/assignments/HW9.html">Homework Nine </a></p>
+		<h2>Link to: <a href="http://homeworkeight.azurewebsites.net/">Homework Nine Live Website </a></h2>
+		
+		
+	   <br><br>
+
 	  
 	  
 	  <br><br>
